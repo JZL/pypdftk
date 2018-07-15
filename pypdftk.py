@@ -78,6 +78,7 @@ def fill_form(pdf_path, datas={}, out_file=None, flatten=True):
     finally:
         if handle:
             os.close(handle)
+    os.remove(tmp_fdf)
     return out_file
 
 def dump_data_fields(pdf_path):
